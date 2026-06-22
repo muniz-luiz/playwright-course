@@ -12,4 +12,4 @@ class HomePage:
     
     def go_to_loan_page(self):
         self.loan_button.click()
-        self.page.wait_for_url("**/loans.html")
+        self.page.wait_for_load_state("networkidle")  # Espera até que a página esteja completamente carregada
