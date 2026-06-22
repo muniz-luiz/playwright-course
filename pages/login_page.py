@@ -1,0 +1,16 @@
+from playwright.sync_api import Page, expect
+
+class LoginPage:
+    def __init__(self, page: Page):
+        self.page = page
+        self.username_input = page.locator("#username")
+        self.password_input = page.locator("#password")
+        self.login_button = page.get_by_role("button", name="Entrar")
+
+    def login(self, username: str, password: str):
+        self.username_input.fill(username)
+        self.password_input.fill(password)
+        self.login_button.click()
+        
+    def assert_successful_login(self):
+        expect(self.page).to_have_url("https://leogcarvalho.github.io/simulabank/home.html")
