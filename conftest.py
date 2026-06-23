@@ -1,4 +1,9 @@
 from pages.login_page import LoginPage
+from pages.home_page import HomePage
+from pages.pix_page import PixPage
+from pages.loan_page import LoanPage
+from pages.statement_page import StatementPage
+from pages.pay_bill import PayBillPage
 import pytest
 
 
@@ -15,11 +20,24 @@ def login_page(page):
     return LoginPage(page)
 
 @pytest.fixture
-def home_page(page):
-    from pages.home_page import HomePage
+def home_page(page):    
     return HomePage(page)
 
 @pytest.fixture
-def loan_page(page):
-    from pages.loan_page import LoanPage
+def statement_page(page):
+    return StatementPage(page)
+
+@pytest.fixture
+def pix_page(page):    
+    return PixPage(page)
+
+@pytest.fixture
+def pay_bill(page):
+    return PayBillPage(page)
+
+@pytest.fixture
+def loan_page(page):    
     return LoanPage(page)
+
+
+
