@@ -13,7 +13,7 @@ class HomePage:
         self.pix_button = page.locator("#makePixBtn")
         self.paybill_button = page.locator("#payBillBtn")
         self.loan_button = page.locator("#loansBtn")
-        self.logout_link = page.get_by_role("link", "Sair")
+        self.logout_link = page.get_by_role("link", name="Sair")
 
     
     def go_to_statement_page(self):
