@@ -11,7 +11,7 @@ class HomePage:
         self.page = page
         self.statement_button = page.locator("#viewStatementBtn")
         self.pix_button = page.locator("#makePixBtn")
-        self.paybill_button = page.locator("#payBillBtn")
+        self.paybill_button = page.locator("#payBillsBtn")
         self.loan_button = page.locator("#loansBtn")
         self.logout_link = page.get_by_role("link", name="Sair")
 
