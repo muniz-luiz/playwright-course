@@ -6,7 +6,7 @@ from pages.loan_page import LoanPage
 
 
 
-def test_004_loan(page: Page, login_page: LoginPage, home_page: HomePage) -> None:
+def test_005_loan(page: Page, login_page: LoginPage, home_page: HomePage) -> None:
     login_page.login("user1", "pass1")
     #valido se fui para home page
     assert "home.html" in page.url

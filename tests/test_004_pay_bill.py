@@ -1,6 +1,6 @@
 from playwright.sync_api import Page
 
-def test_005_pay_bill(home_page, login_page):
+def test_004_pay_bill(home_page, login_page):
     #Vai fazer o login
     login_page.login("user1", "pass1")
     login_page.assert_successful_login()
