@@ -1,5 +1,10 @@
 from playwright.sync_api import Page, expect
 
+def random_string(lenght = 6):
+        import random
+        import string
+        return ''.join(random.choices(string.ascii_lowercase, k=lenght))
+
 
 class LoginPage:
     def __init__(self, page: Page):
@@ -23,6 +28,8 @@ class LoginPage:
         
     def assert_login_error_message(self):
         expect(self.page.locator("#error-message"))
+        
+    
         
         
     
