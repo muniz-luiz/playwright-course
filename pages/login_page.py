@@ -21,5 +21,9 @@ class LoginPage:
     def assert_successful_login(self):
         expect(self.page).to_have_url("https://leogcarvalho.github.io/simulabank/home.html")
         
+    def assert_login_error_message(self):
+        expect(self.page.locator("#error-message"))
+        
+        
     
         
